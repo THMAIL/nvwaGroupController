@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>schart.js 案例演示</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        .canvas-wrapper {
+            width: 600px;
+            height: 400px;
+            /* 避免在PC端显示太大 */
+            display: inline-block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="canvas-wrapper">
+            <canvas id="canvas1"></canvas>
+        </div>
+        <div class="canvas-wrapper">
+            <canvas id="canvas2"></canvas>
+        </div>
+        <br>
+        <div class="canvas-wrapper">
+            <canvas id="canvas3"></canvas>
+        </div>
+        <div class="canvas-wrapper">
+            <canvas id="canvas4"></canvas>
+        </div>
+    </div>
+    <script src="../lib/schart.min.js"></script>
+    <script>
+        new Schart('canvas1', {
+            type: 'bar',
+            title: {
+                text: '最近一周各品类销售图',
+            },
+            bgColor: '#fbfbfb',
+            labels: ['周一', '周二', '周三', '周四', '周五'],
+            datasets: [{
+                label: '家电',
+                fillColor: 'rgba(241, 49, 74, 0.5)',
+                data: [234, 278, 270, 190, 230]
+            }, {
+                label: '百货',
+                data: [164, 178, 190, 135, 160]
+            }, {
+                label: '食品',
+                data: [144, 198, 150, 235, 120]
+            }]
+        })
+
+        new Schart('canvas2', {
+            type: 'line',
+            title: {
+                text: '最近几个月各品类销售趋势图',
+            },
+            bgColor: '#fbfbfb',
+            labels: ['6月', '7月', '8月', '9月', '10月'],
+            datasets: [{
+                label: '家电',
+                data: [234, 278, 270, 190, 230]
+            }, {
+                label: '百货',
+                data: [164, 178, 150, 135, 160]
+            }, {
+                label: '食品',
+                data: [114, 138, 200, 235, 190]
+            }]
+        })
+
+        new Schart('canvas3', {
+            type: 'pie',
+            title: {
+                text: '服装品类销售饼状图'
+            },
+            legend: {
+                position: 'left'
+            },
+            bgColor: '#fbfbfb',
+            labels: ['T恤', '牛仔裤', '连衣裙', '毛衣', '七分裤', '短裙', '羽绒服'],
+            datasets: [{
+                data: [334, 278, 190, 235, 260, 200, 141]
+            }]
+        })
+
+        new Schart('canvas4', {
+            type: 'ring',
+            title: {
+                text: '环形三等分'
+            },
+            showValue: false,
+            legend: {
+                position: 'bottom',
+                bottom: 40
+            },
+            bgColor: '#fbfbfb',
+            labels: ['vue', 'react', 'angular'],
+            datasets: [{
+                data: [500, 500, 500]
+            }]
+        })
+    </script>
+</body>
+
+</html>
