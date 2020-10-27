@@ -7,7 +7,7 @@ certifi==2019.11.28
 cffi==1.13.2
 channels==2.4.0
 constantly==15.1.0
-cryptography==2.8
+cryptography==3.2
 daphne==2.4.1
 Django==3.0.2
 hyperlink==19.0.0
