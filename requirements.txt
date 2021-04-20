@@ -1,6 +1,6 @@
 asgiref==3.2.3
 attrs==19.3.0
-autobahn==20.1.2
+autobahn==20.12.3
 Automat==0.8.0
 cefpython3==66.0
 certifi==2019.11.28
